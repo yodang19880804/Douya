@@ -92,10 +92,13 @@ public class MainActivity extends AppCompatActivity implements NavigationFragmen
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
 
+        // 从外部资源中加载菜单
         getMenuInflater().inflate(R.menu.main, menu);
+
         mNotificationMenuItem = menu.findItem(R.id.action_notification);
         ActionItemBadge.setup(mNotificationMenuItem, R.drawable.notifications_icon_white_24dp,
                 mNotificationListFragment.getUnreadNotificationCount(), this);
+
         MenuItem mDouMailMenuItem = menu.findItem(R.id.action_doumail);
         ActionItemBadge.setup(mDouMailMenuItem, R.drawable.mail_icon_white_24dp, 0, this);
         return true;
@@ -105,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements NavigationFragmen
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                // 点击导航栏，抽屉布局打开展示内容
                 mDrawerLayout.openDrawer(mNavigationFragment.getView());
                 return true;
             case R.id.action_notification:

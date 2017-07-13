@@ -14,12 +14,14 @@
     android:layout_width="match_parent"
     tools:context=".main.ui.MainActivity">
 
+    <!-- 自定义控件 -->
     <me.zhanghai.android.douya.ui.InsetBackgroundFrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         app:insetBackground="?colorPrimaryDarkWithoutSystemWindowScrim" />
+       <!-- 自定义属性 -->
 
     <fragment
         android:id="@+id/navigation_fragment"

@@ -103,7 +103,10 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     compile 'com.jakewharton:disklrucache:2.0.2'
     compile 'com.jakewharton.scalpel:scalpel:1.1.2'
-    compile 'com.jakewharton.threetenabp:threetenabp:1.0.4'
+
+    // 提供类似java8 时间API
+    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.takisoft.fix:preference-v7:25.4.0.3'

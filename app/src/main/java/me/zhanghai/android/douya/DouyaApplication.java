@@ -32,7 +32,9 @@ public class DouyaApplication extends Application {
 
         NightModeHelper.setup(this);
 
+        // 提供类似java8 时间API，需要在Application初始化
         AndroidThreeTen.init(this);
+
         FabricUtils.init(this);
         ViewTarget.setTagId(R.id.glide_view_target_tag);
         Stetho.initializeWithDefaults(this);
